@@ -3,13 +3,15 @@ import FetchAPI from "../CUSTOM_HOOKS/fetchDataFromApi";
 
 const MemoTutorial = () => {
 
- const data =  FetchAPI("https://fakestoreapi.com/products");
- const [show, setShow] = useState(false);
+    const data  = FetchAPI("https://fakestoreapi.com/products");
+    const [show, setShow] = useState(false);
 
 
-const findLargeTitle = ()=>{
-    
+
+
+const largestName = useMemo(()=>{
     if(!data) return "Loading...";
+    
 
     let largest = "";
 
@@ -23,10 +25,6 @@ const findLargeTitle = ()=>{
     console.log("Function Excecuted")
 
     return largest
-}
-
-const largestName = useMemo(()=>{
-     return findLargeTitle();
 },[data])
 
 return(
