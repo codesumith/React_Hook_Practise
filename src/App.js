@@ -1,10 +1,10 @@
 import './App.css';
-import ContextTutorial from './USE_CONTEXT_EXAMPLES/contextTutorial';
+import MemoTutorial from './USE_MEMO_EXAMPLES/usememotutorial';
 
 function App() {
   return (
     <div className="App">
-      <ContextTutorial />
+      <MemoTutorial />
     </div>
   );
 }
